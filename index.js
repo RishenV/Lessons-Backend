@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 3200;
+const PORT = process.env.PORT || 3200 ;
 const path = require('path');
 
 const morgan = require('morgan');
@@ -11,8 +11,8 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
-let myLesson = require('./lesson.js');
-console.log(myLesson);
+// let myLesson = require('./lesson.js');
+// console.log(myLesson);
 
 require("dotenv").config({ path:"./config.env"});
 const { MongoClient } = require("mongodb");
@@ -66,6 +66,10 @@ app.use("/images", function(request, response){
 response.status(404).send("Image not found!");
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}/`);
+// app.listen(PORT, () => {
+//     console.log(`Server running at http://localhost:${PORT}/`);
+// });
+
+app.listen(PORT, function() {
+console.log("App started on port " + PORT);
 });
