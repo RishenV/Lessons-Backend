@@ -2,6 +2,14 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/RishenV/Lessons-Backend#readme",
+  "bugs": {
+    "url": "https://github.com/RishenV/Lessons-Backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RishenV/Lessons-Backend.git"
+  },
   "license": "ISC",
   "author": "",
   "type": "commonjs",
